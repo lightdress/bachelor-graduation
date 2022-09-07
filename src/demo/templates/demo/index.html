@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BIT paper format check</title>
+</head>
+<body>
+    <form enctype="multipart/form-data" action="{% url 'index' %}" method="post">
+        {% csrf_token %}
+        {{ form.file }}
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>
